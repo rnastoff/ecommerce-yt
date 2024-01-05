@@ -14,6 +14,7 @@ async function getData(slug: string) {
       description,
       "slug": slug.current,
       "categoryName": category->name,
+      price_id,
       price_id
   }`;
 
@@ -83,6 +84,7 @@ export default async function ProductPage({
                 currency={"USD"}
                 image={data.images[0]}
                 key={data._id}
+                price_id={data.price_id}
               />
               <Button variant={"secondary"}>Checkout Now</Button>
             </div>
